@@ -33,6 +33,32 @@
       <div class="row align-items-stretch h-100 g-4">
         <div class="col-md-3 d-none d-md-block h-100 p-4" id="sidebar"></div>
         <div class="col-md-9 d-flex flex-column h-100">
+        <div id="mainCarousel" class="carousel slide flex-grow-1 mt-4 pt-4" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="0" class="active"></button>
+              <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="1"></button>
+              <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="2"></button>
+            </div>
+            <div class="carousel-inner h-100">
+              <div class="carousel-item active h-100">
+                <img src="images/carousel1.jpg" class="d-block w-100 h-100" alt="Research Lab" style="object-fit:cover">
+              </div>
+              <div class="carousel-item h-100">
+                <img src="images/carousel2.jpg" class="d-block w-100 h-100" alt="Team Working" style="object-fit:cover">
+              </div>
+              <div class="carousel-item h-100">
+                <img src="images/carousel3.jpg" class="d-block w-100 h-100" alt="Innovation" style="object-fit:cover">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#mainCarousel" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#mainCarousel" data-bs-slide="next">
+              <span class="carousel-control-next-icon"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
           <main class="container main-content-area" id="main-content"></main>
         </div>
       </div>
@@ -48,9 +74,24 @@
   <script src="read_more.js"></script>
   <script src="scripts/loadComponents.js"></script>
   <script>
-    $(function() {
-        loadAllComponents("components/main/index.html");
+  $(function() {
+    loadAllComponents("components/main/index.html").then(function() {
+      initializeReadMoreToggles(); // ✅ Safe to call now
+    }).catch(function(error) {
+      console.error("Component loading error:", error);
     });
-   </script>
+  });
+</script>
+   <script>
+    AOS.init();
+
+    document.addEventListener('DOMContentLoaded', function () {
+      var myCarousel = document.querySelector('#mainCarousel');
+      var carousel = new bootstrap.Carousel(myCarousel, {
+        interval: 5000,
+        pause: 'hover'
+      });
+    });
+  </script>
 </body>
 </html>

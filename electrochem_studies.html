@@ -48,9 +48,13 @@
   <script src="read_more.js"></script>
   <script src="scripts/loadComponents.js"></script>
   <script>
-    $(function() {
-        loadAllComponents("components/main/electrochem_studies.html");
+  $(function() {
+    loadAllComponents("components/main/electrochem_studies.html").then(function() {
+      initializeReadMoreToggles(); // ✅ Safe to call now
+    }).catch(function(error) {
+      console.error("Component loading error:", error);
     });
-   </script>
+  });
+</script>
 </body>
 </html>

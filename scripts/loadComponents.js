@@ -1,16 +1,21 @@
-function loadAllComponents(mainContentPath) {
-  // Load header first
-  $("#header-container").load("components/header.html", function() {
-    // Then load navbar as a sibling
-    $("#navbar-container").load("components/navbar.html");
+function loadComponent(selector, path) {
+  return new Promise((resolve, reject) => {
+    $(selector).load(path, function(response, status) {
+      if (status === "success") {
+        resolve();
+      } else {
+        reject(`Failed to load ${path}`);
+      }
+    });
   });
-  
-  // Load sidebar
-  $("#sidebar").load("components/sidebar.html");
-  
-  // Load main content
-  $("#main-content").load(mainContentPath);
-  
-  // Load footer
-  $("#footer").load("components/footer.html");
+}
+
+function loadAllComponents(mainContentPath) {
+  return Promise.all([
+    loadComponent("#header-container", "components/header.html"),
+    loadComponent("#navbar-container", "components/navbar.html"),
+    loadComponent("#sidebar", "components/sidebar.html"),
+    loadComponent("#main-content", mainContentPath),
+    loadComponent("#footer", "components/footer.html")
+  ]);
 }

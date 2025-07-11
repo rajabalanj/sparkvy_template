@@ -1,5 +1,4 @@
-document.addEventListener('DOMContentLoaded', function() {
-    // Generalized Read More/Read Less script for all buttons with .read-more-btn class
+function initializeReadMoreToggles() {
     var readMoreButtons = document.querySelectorAll('.read-more-btn');
 
     readMoreButtons.forEach(function(button) {
@@ -20,4 +19,4 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
-});
+}
