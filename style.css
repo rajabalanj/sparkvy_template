@@ -159,8 +159,15 @@ header {
 
 /* Main content */
 main.container {
-  padding: 3% 0;
+  padding: 3%;
   width: 100%;
+}
+
+@media (max-width: 991.98px) {
+  main.container {
+    padding: .1%;
+  }
+  
 }
 
 .header-main-row {
@@ -481,7 +488,7 @@ li {
 
 /* Internship Opportunities Section */
 .service-section {
-  padding: 2rem 0;
+  padding: 1rem 0;
   background: #f8f9fa; /* Light background */
 }
 
@@ -587,7 +594,7 @@ li {
 }
 
 .feedback-form-container {
-  max-width: 800px;
+  /* max-width: 800px; */
   margin: 0 auto;
   background: white;
   padding: 2rem;
@@ -1002,7 +1009,6 @@ li {
   font-size: 1.75rem;          /* Maintaining size control */
   
   /* Spacing */
-  margin: 0 0 1.25rem 0;      /* Balanced margin */
   padding: 0 0 15px 0;        /* Consistent padding */
   
   /* Structure */

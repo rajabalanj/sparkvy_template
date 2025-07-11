@@ -1,0 +1,58 @@
+<div class="col-md-12">
+<section id="feedback" class="feedback-section">
+    <div class="container">
+      <h2 class="section-title">Feedback Form</h2>
+      
+      <div class="feedback-form-container">
+        <form id="sariFeedbackForm" name="sariFeedbackForm" method="POST" data-netlify="true" class="needs-validation">
+          <input type="hidden" name="form-name" value="sariFeedbackForm">
+          <div class="row">
+            <!-- Name Field -->
+            <div class="col-md-6 mb-3">
+              <label for="name" class="form-label">Name *</label>
+              <input type="text" name="name" class="form-control" id="name" required pattern="^[A-Za-z ]+$" title="Only letters and spaces are allowed">
+              <div class="invalid-feedback">
+                Please provide a valid name (letters and spaces only).
+              </div>
+            </div>
+            
+            <!-- Email Field -->
+            <div class="col-md-6 mb-3">
+              <label for="email" class="form-label">Email *</label>
+              <input type="email" name="email" class="form-control" id="email" required>
+              <div class="invalid-feedback">
+                Please provide a valid email address.
+              </div>
+            </div>
+            
+            <!-- Organization Field -->
+            <div class="col-12 mb-3">
+              <label for="organization" class="form-label">Organization Name</label>
+              <input type="text" name="organization" class="form-control" id="organization">
+            </div>
+            
+            <!-- Feedback About SARi -->
+            <div class="col-12 mb-3">
+              <label for="sari_feedback" class="form-label">Feedback About SARi *</label>
+              <textarea class="form-control" name="sari_feedback" id="sari_feedback" rows="4" required></textarea>
+              <div class="invalid-feedback">
+                Please provide your feedback.
+              </div>
+            </div>
+            
+            <!-- Suggestions Field -->
+            <div class="col-12 mb-4">
+              <label for="suggestions" class="form-label">Valuable Suggestions</label>
+              <textarea class="form-control" name="suggestions" id="suggestions" rows="4"></textarea>
+            </div>
+            
+            <!-- Submit Button -->
+            <div class="col-12 text-center">
+              <button class="btn btn-primary btn-lg" type="submit">SUBMIT</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+</div>

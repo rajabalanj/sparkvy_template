@@ -1,0 +1,82 @@
+<section id="contact" class="feedback-section">
+                <div class="container">
+                  <h2 class="section-title text-center mb-5">Application Form</h2>
+                  
+                  <div class="row">
+                    <!-- Work with us Form -->
+                    <div class="col-lg-12 mb-5 mb-lg-0">
+                      <form id="WalkWithUs" name="WalkWithUs" class="needs-validation" method="POST" data-netlify="true">
+                        <input type="hidden" name="form-name" value="WalkWithUs" />
+                        <div class="row">
+                          <!-- First Name -->
+                          <div class="col-md-6 mb-3">
+                            <label for="firstName" class="form-label">First Name *</label>
+                            <input type="text" name="firstName" class="form-control" id="firstName" required pattern="^[A-Za-z]+$" title="Only letters are allowed">
+                            <div class="invalid-feedback">
+                              Please provide a valid first name (letters only).
+                            </div>
+                          </div>
+                          
+                          <!-- Last Name -->
+                          <div class="col-md-6 mb-3">
+                            <label for="lastName" class="form-label">Last Name *</label>
+                            <input type="text" name ="lastName" class="form-control" id="lastName" required>
+                            <div class="invalid-feedback">
+                              Please provide your last name.
+                            </div>
+                          </div>
+                          
+                          <!-- Email Field -->
+                          <div class="col-md-6 mb-3">
+                            <label for="email" class="form-label">Email *</label>
+                            <input type="email" name="email" class="form-control" id="email" required>
+                            <div class="invalid-feedback">
+                              Please provide a valid email address.
+                            </div>
+                          </div>
+                          
+                          <!-- Phone Number -->
+                          <div class="col-12 mb-3">
+                            <label for="phone" class="form-label">Phone Number</label>
+                            <input type="tel" name="phone" class="form-control" id="phone" pattern="^\+?[0-9\s\-]{7,20}$"
+                              title="Enter a valid WhatsApp number. Digits, spaces, dashes, and optional + at the beginning allowed.">
+                          </div>
+
+                          <!-- Whatsapp Number -->
+                          <div class="col-12 mb-3">
+                            <label for="Whatsapp" class="form-label">Whatsapp Number</label>
+                            <input type="tel" name="Whatsapp" class="form-control" id="Whatsapp" pattern="^\+?[0-9\s\-]{7,20}$"
+                              title="Enter a valid WhatsApp number. Digits, spaces, dashes, and optional + at the beginning allowed.">
+                          </div>
+
+                          <!-- Role Selection -->
+                          <div class="col-12 mb-3">
+                            <label for="role" class="form-label">To Walk with us as a *</label>
+                            <select class="form-select" id="role" name="role" required>
+                              <option value="" disabled selected>Select your role</option>
+                              <option value="Researcher">Researcher</option>
+                              <option value="Advisor">Advisor</option>
+                              <option value="Technical Assistant">Technical Assistant</option>
+                              <option value="Field Expert">Field Expert</option>
+                            </select>
+                            <div class="invalid-feedback">
+                              Please select a role to proceed.
+                            </div>
+                          </div>
+                          
+                          <!-- Last Details -->
+                          <div class="col-12 mb-4">
+                            <label for="details" class="form-label">Other details</label>
+                            <textarea class="form-control" id="details" name="details" rows="3"></textarea>
+                          </div>
+                          
+                          <!-- Submit Button -->
+                          <div class="col-12">
+                            <button class="btn btn-primary btn-lg w-100" type="submit">Submit Request</button>
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </section>
