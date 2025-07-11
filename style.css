@@ -1,0 +1,1045 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Quicksand:wght@300..700&display=swap');
+/* Reset and base styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", sans-serif;
+  line-height: 1.6;
+  background-color: #f9f9f9;
+  color: #333;
+  overflow-x: hidden;
+  /* padding: 0 5%; */
+}
+
+.container-wrapper {
+  padding: 0 5%; /* Apply padding here instead */
+}
+
+
+/* Main container */
+.main-container {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  background: white;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Header styles */
+header {
+  background-color: white !important;
+  color: #004c91;
+  padding: 20px 0;
+  width: 100%;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  padding: 16px 24px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  border: 1px solid #eaeaea;
+  border-radius: 8px;
+  width: 100%; /* Ensure it takes full width for flex container */
+}
+
+/* Desktop header text styles */
+.header-text {
+  /* This block now specifically targets the desktop text container */
+  /* This entire div will be hidden on mobile by d-none d-md-block */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 20px; 
+  flex-grow: 1; /* Allows it to push the navbar-toggler to the right on desktop */
+}
+
+.header-text h1 {
+  font-family: "Jost", sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #004c91;
+}
+
+.header-logo {
+  height: 60px;
+  object-fit: contain;
+  margin-right: 20px;
+}
+
+@media (max-width: 991.98px) {
+  /* Stack logo and hamburger in a row */
+  .header-container {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 10px 15px;
+  }
+
+  .header-logo {
+    height: 45px; /* Match hamburger height */
+    margin-right: 0;
+    order: 2; /* Move logo to the left */
+  }
+
+  .accordion-button {
+      order: 1; /* Place the accordion button after the logo */
+      margin-left: auto; /* Push it to the right */
+  }
+
+  /* This ensures the entire header-text block takes full width below the logo/button row */
+  .header-text {
+    width: 100%; /* Take full width of the container */
+    text-align: center; /* Center the text content */
+    margin-top: 10px; /* Add some space above the text */
+    order: 3; /* Place the text content last in the flex order */
+  }
+
+  .header-text h1.d-block.d-md-none { /* Target the mobile-specific H1 */
+    font-size: 1.5rem; /* Smaller font size for mobile H1 */
+    margin-bottom: 5px; /* Adjust margin */
+  }
+
+  .header-text p {
+    font-size: 0.9rem; /* Smaller paragraph font size for mobile */
+    padding: 4px 12px; /* Adjust padding for mobile paragraph */
+    margin-top: 4px; /* Adjust margin for mobile paragraph */
+  }
+
+  .navbar-toggler {
+      /* Position it to align with the logo and accordion button, if needed */
+      margin-left: auto; /* Pushes it to the right */
+  }
+}
+
+.navbar-nav a {
+  text-transform: uppercase;
+}
+
+
+/* Navigation */
+ .navbar {
+  background-color: #004c91 !important; /* Blue */
+  padding: 0;
+  width: 100%;
+  border-radius: 5px;
+}
+
+.nav-link{
+  color: #fff !important; /* White text */
+  padding: 0.5rem 1rem;
+}
+
+
+.navbar-nav .nav-link:hover {
+  opacity: 1;
+  background-color: #5685a6 !important; /* Darker blue for hover */
+  color: #fff !important; /* White text on hover */
+  border-radius: 5px;
+}
+
+.navbar-toggler {
+  border-color: transparent;
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='%23007bff' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(0, 123, 255, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+/* Update this rule to justify the nav bar items */
+.navbar-nav {
+  justify-content: space-between;
+}
+
+
+/* Main content */
+main.container {
+  padding: 3% 0;
+  width: 100%;
+}
+
+.header-main-row {
+    display: flex; /* Always flex for consistency, but media queries will adjust behavior */
+    align-items: center;
+    background-color: #fff;
+    padding: 16px 24px; /* Desktop padding */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    border: 1px solid #eaeaea;
+    border-radius: 8px;
+    width: 100%;
+}
+
+
+
+.accordion .accordion-button {
+  background-color: #f8f9fa;
+  font-size: 0.9rem;
+  font-weight: normal;
+}
+
+.accordion .accordion-body {
+  font-size: 0.85rem;
+  color: #555;
+}
+
+.accordion-button i {
+  font-size: 1.2rem;
+  /* display: none; */
+}
+
+/* Sections */
+section {
+  margin-bottom: 60px;
+  scroll-margin-top: 100px;
+}
+
+
+
+/* Buttons */
+.btn-custom {
+  border-color: #CC4A42;
+  color: #CC4A42;
+}
+
+.btn-custom:hover {
+  background-color: #CC4A42;
+  color: white;
+}
+
+.btn-primary-custom {
+  background-color: #004c91;
+  border-color: #004c91;
+}
+
+/* Footer */
+footer {
+  background-color: #004c91 !important;
+  color: white;
+  padding: 0 5%;
+  width: 100%;
+  border-radius: 5px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  /* The container itself doesn't need flex properties for mobile now,
+     as we are controlling the flex within .header-main-row */
+  .container {
+    padding: 0; /* Remove default container padding on very small screens if desired */
+  }
+
+  .header-main-row {
+    /* These classes are already in HTML for mobile, but good to reinforce or override if needed */
+    flex-wrap: nowrap; /* Ensure single row */
+    justify-content: flex-start; /* Space out items */
+    align-items: center; /* Center vertically */
+    padding: 10px 15px; /* Mobile padding for the top row */
+  }
+/* Adjustments for the main navbar-toggler */
+  .navbar-toggler {
+      display: block !important; /* Ensure it's shown on mobile */
+      margin-left: auto; /* No specific left margin needed as flex handles spacing */
+  }
+
+  .header-logo {
+    height: 40px; /* Smaller logo for mobile */
+    margin-right: 10; /* No right margin needed here */
+  }
+
+  /* Accordion button below the main header row */
+  .accordion-button {
+      display: inline-block !important; /* Show on mobile */
+      /* margin-top: 10px; Space below the main header row */
+      margin-left: 0; /* Center horizontally */
+      margin-right: 10px; /* Center horizontally */
+      padding: 0px; /* Adjust padding */
+      font-size: 1rem; /* Font size */
+      /* width: auto; Allow width to be determined by content */
+  }
+
+  .accordion-button i {
+      color: #004c91; /* Icon color */
+      /* font-size: 1.2rem; Icon size */
+  }
+
+  /* Show and style the mobile H1 (SparkVy) */
+  .header-mobile-h1 {
+      display: block !important; /* Override d-none for desktop */
+      font-size: 1.5rem; /* Mobile font size */
+      color: #004c91;
+      font-family: "Jost", sans-serif;
+      font-weight: 700;
+      margin: 0; /* Remove default margins */
+      flex-grow: 0; /* Allow it to take up available space to center itself */
+      text-align: left; /* Center the text within its allocated flex space */
+  }
+
+  /* Hide the desktop text container */
+  .header-text {
+    display: none; /* Hide the entire desktop text block on mobile */
+  }
+}
+
+/* Further refine for very small screens if necessary (e.g., phones in portrait) */
+@media (max-width: 575.98px) { /* Bootstrap's 'xs' breakpoint */
+    .header-logo {
+        height: 35px; /* Even smaller logo */
+    }
+    .header-mobile-h1 {
+        font-size: 1.3rem; /* Even smaller H1 */
+    }
+    .accordion-button {
+        margin-right: 5px;
+    }
+    .header-logo {
+        margin-right: 5px;
+    }
+}
+
+.header-text h1 {
+  font-family: "Jost", sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #004c91;
+  /* letter-spacing: 1px; */
+}
+
+.header-text p {
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 500;
+  background-color: #CC4A42;
+  color: #fff;
+  display: inline-block ! important;
+  padding: 6px 16px;
+  border-radius: 20px;
+  margin-top: 8px;
+  font-size: 1rem;
+}
+
+.header-mobile-h1 {
+    display: none;
+}
+
+/* Navigation Dropdown Styles */
+.navbar .dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  margin-top: 0;
+  background-color: white;
+  color: #fff;
+  border: 1px solid #ddd;
+  border-top: 2px solid #D9534F;
+  border-radius: 0 0 0.5rem 0.5rem;
+  margin-top: 0;
+  z-index: 1000;
+  /* Let Bootstrap handle display property */
+}
+
+/* Service Section */
+
+.service-section {
+  margin-bottom: 1rem;
+  padding-top: 1rem; /* For anchor link spacing */
+}
+
+.service-subtitle {
+  /* Typography */
+  color: #2c7be5;              /* Uncommented blue color */
+  font-size: 1.5rem;           /* Added font size */
+  font-weight: 600;            /* Added semi-bold weight */
+  
+  /* Spacing */
+  margin-bottom: 1.5rem;       /* Consistent margin */
+  padding-bottom: 0.5rem;      /* Consistent padding */
+  
+  /* Underline */
+  position: relative;          /* Needed for pseudo-element */
+  display: inline-block;       /* Contain underline width */
+  
+  /* Underline Effect */
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 3px;
+    background: #D9534F;       /* Red accent line */
+    border-radius: 3px;        /* Optional rounded edges */
+  }
+}
+
+/* How to Use Facilities Section */
+.facility-access-guide {
+  background: #f8f9fa;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.step-card {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  align-items: center;
+}
+
+.step-number {
+  background: #CC4A42;
+  color: white;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  flex-shrink: 0;
+}
+
+.step-content h4 {
+  color: #2c3e50;
+  margin-bottom: 0.5rem;
+}
+
+.notes-list {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.notes-list li {
+  padding: 0.5rem 0;
+  padding-left: 2rem;
+  position: relative;
+}
+
+.notes-list li:before {
+  content: "•";
+  color: #CC4A42;
+  font-size: 1.5rem;
+  position: absolute;
+  left: 0.5rem;
+  top: 0;
+}
+
+@media (max-width: 768px) {
+  .step-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+/* Analytical Services List */
+.analytical-services-list {
+  background: #f8fafc;
+  padding: 2rem;
+  border-radius: 8px;
+}
+
+.service-items {
+  list-style-type: none;
+  padding-left: 0;
+  columns: 2;
+  column-gap: 2rem;
+}
+
+.service-items li {
+  padding: 0.5rem 0;
+  padding-left: 2rem;
+  position: relative;
+  break-inside: avoid;
+}
+
+.service-items li i {
+  color: #D9534F;
+  position: absolute;
+  left: 0.5rem;
+  width: 1.25rem;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .service-items {
+    columns: 1;
+  }
+}
+
+li {
+  display: flex;
+  align-items: center; /* Vertically centers icon and text */
+  gap: 8px; /* Adds consistent spacing */
+}
+
+/* Internship Opportunities Section */
+.service-section {
+  padding: 2rem 0;
+  background: #f8f9fa; /* Light background */
+}
+
+
+
+.opportunity-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.opportunity-list {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  gap: 1rem;
+}
+
+.opportunity-item {
+  display: flex;
+  align-items: center;
+  background: white;
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+
+.opportunity-item:hover {
+  transform: translateY(-3px);
+}
+
+.opportunity-icon {
+  font-size: 1.2rem;
+  color: #2c7be5;
+  margin-right: 1rem;
+  width: 24px;
+  text-align: center;
+}
+
+.opportunity-text {
+  font-size: 1.1rem;
+  color: #333;
+}
+
+
+/* People sections */
+.people-section {
+  padding: 4rem 0;
+}
+
+.people-section .section-title {
+  /* border-bottom: 2px solid #CC4A42; */
+  padding-bottom: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+/* People Section Styling */
+.people-section {
+  padding: 2rem 0;
+}
+
+.people-card {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  height: 100%;
+  text-align: center;
+}
+
+.people-card:hover {
+  transform: translateY(-5px);
+}
+
+.people-image {
+  height: 200px;
+  overflow: hidden;
+}
+
+.people-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.people-card h4 {
+  padding: 1rem;
+  margin: 0;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+@media (max-width: 768px) {
+  .people-image {
+    height: 150px;
+  }
+}
+
+/* Feedback Section */
+.feedback-section {
+  background-color: #f8f9fa;
+}
+
+.feedback-form-container {
+  max-width: 800px;
+  margin: 0 auto;
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+}
+
+
+.form-label {
+  font-weight: 500;
+  color: #495057;
+}
+
+.text-primary {
+  color: #004c91 !important;
+}
+
+
+.btn-primary {
+  background-color: #CC4A42;
+  border-color: #CC4A42;
+  padding: 0.5rem 2rem;
+  font-weight: 500;
+}
+
+.btn-primary:hover {
+  background-color: #e05d00;
+  border-color: #e05d00;
+}
+
+/* To Walk with us Section */
+.career-section {
+  background-color: #f8fafc;
+}
+
+.career-content {
+  max-width: 800px;
+}
+
+.btn-primary {
+  background-color: #CC4A42;
+  border-color: #CC4A42;
+  min-width: 200px;
+}
+
+.btn-outline-primary {
+  color: #CC4A42;
+  border-color: #CC4A42;
+  min-width: 200px;
+}
+
+.btn-outline-primary:hover {
+  background-color: #CC4A42;
+  color: white;
+}
+
+.lead {
+  font-size: 1.25rem;
+  color: #495057;
+}
+
+@media (max-width: 768px) {
+  .cta-buttons {
+    flex-direction: column;
+    gap: 1rem !important;
+  }
+
+  .btn-primary,
+  .btn-outline-primary {
+    width: 100%;
+  }
+}
+
+/* Contact Section */
+.contact-section {
+  background-color: #f8f9fa;
+}
+
+.contact-info {
+  border-radius: 8px;
+  border-left: 4px solid #D9534F;
+}
+
+.contact-info h4 {
+  color: #D9534F;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.contact-info h4:after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 2px;
+  background: #ddd;
+  margin-top: 8px;
+}
+
+.contact-info h5 {
+  color: #495057;
+  font-size: 1.1rem;
+}
+
+.contact-methods i {
+  color: #D9534F;
+  width: 20px;
+  text-align: center;
+}
+
+.btn-primary {
+  background-color: #CC4A42;
+  border-color: #CC4A42;
+  padding: 0.75rem;
+  font-weight: 500;
+}
+
+.btn-primary:hover {
+  background-color: #e05d00;
+  border-color: #e05d00;
+}
+
+/* Form validation */
+.was-validated .form-control:invalid {
+  border-color: #dc3545;
+}
+
+.was-validated .form-control:valid {
+  border-color: #28a745;
+}
+
+/* Improved Image Handling */
+.equipment-img-container {
+  height: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+}
+
+.equipment-img-contain {
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+/* Card Styling */
+.equipment-card {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+  border: 1px solid #eee;
+}
+
+.equipment-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.equipment-info {
+  padding: 1.5rem;
+  border-top: 1px solid #f0f0f0;
+}
+
+@media (max-width: 768px) {
+  .equipment-img-container {
+    height: 180px;
+    padding: 1rem;
+  }
+}
+
+.letter-circle {
+  width: 40px;
+  height: 40px;
+  background-color: #D9534F;
+  color: white;
+  font-weight: bold;
+  font-size: 1.2rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px; /* Space between circle and first team member */
+}
+
+.letter-img {
+  width: 40px;
+  height: 40px;
+  color: white;
+  font-weight: bold;
+  font-size: 1.2rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.letter-img img {
+  width: 40px;
+  height: 40px;
+  object-fit: cover; /* keeps image inside circle */
+  border-radius: 50%;
+}
+
+/* Equal column width */
+.col {
+  flex: 1 0 0%; /* Equal width columns */
+  max-width: 100%;
+  min-width: 50px; /* Minimum width to prevent squishing */
+}
+
+
+.team-img {
+  width: 40px;          /* Must match letter-circle dimensions */
+  height: 40px;         /* Must match letter-circle dimensions */
+  border-radius: 50%;    /* Creates perfect circle */
+  object-fit: cover;     /* Prevents image distortion */
+  object-position: center; /* Centers the image focal point */
+  display: block;       /* Removes inline spacing */
+  margin: 0 auto;       /* Centers horizontally */
+  padding: 0;           /* Removes any default padding */
+  border: 2px solid #f47c2c; /* Optional matching border */
+}
+
+.team-member h5 {
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+  
+}
+
+
+
+/* Team Grid System */
+.team-scroll-container {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  width: 100%;
+  padding-bottom: 15px;
+}
+
+.team-scroll-wrapper {
+  display: flex;
+  gap: 20px;
+  padding: 0 10px;
+}
+
+.team-column {
+  min-width: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+/* Letter Circle in Column */
+.team-column .letter-circle {
+  margin-bottom: 10px;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  padding: 10px 0;
+}
+
+/* Responsive Grid */
+@media (min-width: 768px) {
+  .team-scroll-container {
+    overflow-x: visible;
+  }
+  .team-scroll-wrapper {
+    display: grid;
+    grid-template-columns: repeat(8, minmax(0, 1fr));
+    gap: 15px;
+  }
+  .team-column {
+    min-width: auto;
+  }
+}
+
+/* Desktop hover behavior (optional) */
+@media (min-width: 992px) {
+  .navbar .dropdown:hover .dropdown-menu {
+    display: block;
+  }
+}
+
+/* Dropdown items */
+.navbar .dropdown-item {
+  color: #000;
+  background-color: #fff;
+  padding: 0.5rem 1rem;
+}
+
+.navbar .dropdown-item:hover {
+  background-color: #005fa3;
+  color: #fff;
+}
+
+/* For desktop view */
+@media (min-width: 992px) {
+  .navbar .dropdown-menu {
+    border-top: 2px solid #ffab40;
+    border-radius: 0 0 0.5rem 0.5rem;
+  }
+}
+
+/* Fix: Mobile dropdowns must show when .show is added */
+@media (max-width: 991.98px) {
+  .navbar .dropdown-menu {
+    position: static;
+    background-color: white;
+    border: none;
+    box-shadow: none;
+  }
+
+  .navbar .dropdown-item {
+    color: #000;
+  }
+
+  .navbar .dropdown-item:hover {
+    background-color: #003f78;
+  }
+}
+
+/* WhatsApp Floating Button */
+.whatsapp-float {
+    position: fixed; /* Stays in the same position relative to the viewport */
+    width: 60px; /* Width of the button */
+    height: 60px; /* Height of the button */
+    bottom: 20px; /* Distance from the bottom edge */
+    right: 20px; /* Distance from the right edge */
+    background-color: #25d366; /* WhatsApp brand green */
+    color: #FFF; /* White icon color */
+    border-radius: 50px; /* Makes the button perfectly circular */
+    text-align: center;
+    font-size: 28px; /* Size of the WhatsApp icon */
+    box-shadow: 2px 2px 3px rgba(0,0,0,0.4); /* Subtle shadow for depth */
+    z-index: 1000; /* Ensures the button appears above other content */
+    display: flex; /* Use flexbox to center the icon */
+    justify-content: center; /* Horizontally center the icon */
+    align-items: center; /* Vertically center the icon */
+    text-decoration: none; /* Remove underline from the link */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
+}
+
+/* Hover effect for the WhatsApp button */
+.whatsapp-float:hover {
+    background-color: #1DA851; /* Slightly darker green on hover */
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.6); /* More prominent shadow on hover */
+}
+
+/* --- Footer Mobile Adjustments --- */
+@media (max-width: 767.98px) {
+    /* Adjust overall footer padding for smaller screens */
+    footer {
+        padding-top: 2.5rem !important; /* Equivalent to Bootstrap's py-4 */
+        padding-bottom: 2.5rem !important; /* Equivalent to Bootstrap's py-4 */
+    }
+
+    /* Make headings slightly smaller for better fit */
+    footer h3.h5 {
+        font-size: 1.15rem; /* A bit smaller than the default h5 */
+        margin-bottom: 0.75rem !important; /* Reduce margin below headings */
+    }
+
+    /* Slightly reduce text size for address, lists, and small text */
+    footer address.small,
+    footer ul.list-unstyled li,
+    footer .small {
+        font-size: 0.9rem; /* Smaller than default, larger than `small` */
+    }
+
+    /* Add vertical spacing between stacked columns */
+    /* This targets the direct children of the row with g-4 that stack */
+    footer .row.g-4 > div {
+        margin-bottom: 1.5rem; /* Adds space between the stacked columns */
+    }
+
+    /* Remove bottom margin from the last column in the top row on mobile */
+    footer .row.g-4 > div:last-child {
+        margin-bottom: 0;
+    }
+
+    /* Ensure consistent spacing for the copyright and tagline row */
+    footer .row:last-child .col-md-6 {
+        margin-bottom: 0 !important;
+    }
+}
+
+.main-content-area {
+  background-color: #f8f9fa; /* Light grey background */
+  padding: 30px; /* Consistent padding on all sides */
+  border-radius: 8px; /* Slightly rounded corners */
+  margin: 20px 0; /* Vertical spacing (top and bottom) */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05); /* Subtle shadow for depth */
+  
+  /* Additional recommended properties */
+  width: 100%; /* Ensures full width */
+  box-sizing: border-box; /* Includes padding in width calculation */
+}
+
+.main-content-area p {
+    text-align: justify; /* */
+}
+
+.section-title {
+  /* Typography */
+  color: #004c91;              /* Using new darker color */
+  font-weight: 700;            /* Maintaining boldness */
+  text-align: center;          /* Keeping centered alignment */
+  font-size: 1.75rem;          /* Maintaining size control */
+  
+  /* Spacing */
+  margin: 0 0 1.25rem 0;      /* Balanced margin */
+  padding: 0 0 15px 0;        /* Consistent padding */
+  
+  /* Structure */
+  position: relative;         /* Needed for underline */
+  display: block;      /* Contain underline width */
+  
+  /* Underline effect */
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background: #D9534F;      /* Keeping red accent */
+  }
+}
+
+/* Custom style for card titles to differentiate from main section titles */
+.card-body h3.card-title {
+    color: #004c91; /* Match header color for consistency */
+    font-weight: 600; /* Make it bold but not as heavy as section-title */
+    margin-bottom: 1rem; /* Standard margin for a heading */
+    /* Intentionally no border-bottom to differentiate from .section-title */
+}
+
+.subheading {
+  color: #004c91; /* Match header color for consistency */
+  font-weight: 600; /* Make it bold but not as heavy as section-title */
+  margin-bottom: 1rem; /* Standard margin for a heading */
+  font-size: 1.25rem; /* Slightly smaller than section title */
+} 
+
+.header-full-width {
+  max-width: 100% !important;
+  width: 100% !important;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}

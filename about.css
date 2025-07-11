@@ -1,0 +1,67 @@
+
+
+/* Optional: Enhance section titles */
+
+
+/* Optional: Style for lists with checkmarks */
+.checkmark-list {
+    list-style: none; /* Remove default bullet points */
+    padding-left: 0;
+}
+
+.checkmark-list li {
+    margin-bottom: 8px;
+    position: relative;
+    padding-left: 25px; /* Space for the checkmark icon */
+}
+
+.checkmark-list li .fas.fa-check-circle {
+    color: #28a745; /* Green color for checkmarks */
+    position: absolute;
+    left: 0;
+    top: 3px; /* Adjust as needed for vertical alignment */
+}
+
+/* Optional: Enhance section titles */
+
+
+/* Optional: Style for lists with checkmarks */
+.checkmark-list {
+    list-style: none; /* Remove default bullet points */
+    padding-left: 0;
+}
+
+.checkmark-list li {
+    margin-bottom: 8px;
+    position: relative;
+    padding-left: 25px; /* Space for the checkmark icon */
+    /* Add this line to justify text in list items */
+    text-align: justify; /* */
+}
+
+.checkmark-list li .fas.fa-check-circle {
+    color: #28a745; /* Green color for checkmarks */
+    position: absolute;
+    left: 0;
+    top: 3px; /* Adjust as needed for vertical alignment */
+}
+
+/* Add this new rule to justify text within card paragraphs */
+.card-body p.card-text {
+    text-align: justify; /* */
+}
+
+/* If you also want to justify the general "About SARI" paragraph outside a card initially */
+
+
+/* In about.css */
+
+.note-section {
+    text-align: justify;
+}
+
+/* In about.css */
+
+.read-more-btn {
+    cursor: pointer;
+}

@@ -1,0 +1,65 @@
+/* Header Container */
+header.bg-white {
+    padding: 1.5rem 0;
+}
+
+/* Logo Styling */
+.header-logo {
+    height: 80px;
+    width: auto;
+    margin-right: 30px;
+}
+
+/* Text Elements */
+.header-text h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.header-text p {
+    font-size: 1.3rem;
+    color: #ffffff;
+}
+
+/* Mobile Header */
+.header-mobile-h1 {
+    font-size: 1.75rem;
+    margin-left: 15px;
+    font-weight: 600;
+}
+
+/* Buttons */
+.navbar-toggler {
+    padding: 0.5rem 0.75rem;
+    font-size: 1.25rem;
+}
+
+.accordion-button {
+    font-size: 1.25rem;
+    padding: 0.75rem;
+}
+
+/* Header Row */
+.header-main-row {
+    min-height: 80px; /* Ensure minimum height */
+}
+
+@media (max-width: 575.98px) {
+    .header-logo {
+        height: 50px;
+        margin-right: 0px;
+    }
+    
+    .header-mobile-h1 {
+        font-size: 1.5rem; /* Adjust mobile header */
+    }
+    
+    .header-text h1 {
+        font-size: 1.75rem;
+    }
+    
+    .header-text p {
+        font-size: 1.1rem;
+    }
+}

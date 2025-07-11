@@ -1,0 +1,25 @@
+/* In your custom.css file */
+#footer .h4 { /* Targeting the h4 within the footer specifically */
+    font-size: calc(1.275rem + .3vw); /* Slightly larger, responsive h4 */
+    /* Or a fixed size if preferred: font-size: 1.6rem; */
+}
+
+#footer address,
+#footer ul.list-unstyled li,
+#footer p {
+    font-size: 0.95rem; /* Slightly increase the base font size for all text */
+}
+
+/* If you want the specific text within links to be bolder or larger */
+#footer .email-text,
+#footer .phone-text,
+#footer .whatsapp-text {
+    font-weight: 500; /* Medium bold */
+    /* Or font-size: 1rem; to make them slightly larger than default */
+}
+
+/* Adjust the bottom copyright text if "small" is too small */
+#footer .row:last-child p { /* Targets the paragraphs in the last row of the footer */
+    font-size: 0.9rem; /* Making copyright text slightly larger than Bootstrap's default .small */
+    line-height: 1.5; /* Ensures good readability */
+}

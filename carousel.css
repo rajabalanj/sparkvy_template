@@ -1,0 +1,44 @@
+/* Carousel adjustments */
+.carousel-container {
+    width: 100%;
+    margin: 20px 0;
+  }
+  
+  .carousel {
+    width: 100%;
+    border-radius: 0; /* Removed rounded corners */
+    overflow: hidden;
+  }
+  
+  .carousel-inner {
+    max-height: 400px;
+  }
+  
+  .carousel-item img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+  }
+
+  /* Dark overlay on carousel items */
+.carousel-item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.1); /* Adjust the darkness as needed */
+  z-index: 1;
+}
+
+/* Ensure proper stacking of content */
+.carousel-item {
+  position: relative;
+}
+
+  @media (max-width: 768px) {
+  .carousel-inner {
+    max-height: 300px;
+  }
+}
