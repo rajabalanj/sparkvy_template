@@ -24,73 +24,57 @@
 <body>
   <div class="container-wrapper">
     <div class="sticky-top">
-     <!-- Header container -->
-    <div id="header-container"></div>
-    <!-- Navbar container (sibling of header) -->
+     <div id="header-container"></div>
     <div id="navbar-container"></div>
     </div>
     <div class="container header-full-width" style="min-height: 600px;">
       <div class="row align-items-stretch h-100 g-4">
         <div class="col-md-3 d-none d-md-block h-100 p-4" id="sidebar"></div>
         <div class="col-md-9 d-flex flex-column h-100">
-        <div id="mainCarousel" class="carousel slide flex-grow-1 mt-4 pt-4" data-bs-ride="carousel">
-            <div class="carousel-indicators">
-              <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="0" class="active"></button>
-              <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="1"></button>
-              <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="2"></button>
-            </div>
-            <div class="carousel-inner h-100">
-              <div class="carousel-item active h-100">
-                <img src="images/carousel1.jpg" class="d-block w-100 h-100" alt="Research Lab" style="object-fit:cover">
-              </div>
-              <div class="carousel-item h-100">
-                <img src="images/carousel2.jpg" class="d-block w-100 h-100" alt="Team Working" style="object-fit:cover">
-              </div>
-              <div class="carousel-item h-100">
-                <img src="images/carousel3.jpg" class="d-block w-100 h-100" alt="Innovation" style="object-fit:cover">
-              </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#mainCarousel" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon"></span>
-              <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#mainCarousel" data-bs-slide="next">
-              <span class="carousel-control-next-icon"></span>
-              <span class="visually-hidden">Next</span>
-            </button>
-          </div>
           <main class="container main-content-area" id="main-content"></main>
         </div>
       </div>
     </div>
-    
-    
   </div>
   <footer class="text-white py-5" style="background-color: #004c91 !important;" id="footer"></footer>
+
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
   <script src="aos.js"></script>
   <script src="read_more.js"></script>
   <script src="scripts/loadComponents.js"></script>
-  <script>
+  <script src="scripts/router.js"></script> <script>
   $(function() {
-    loadAllComponents("components/main/index.html").then(function() {
-      initializeReadMoreToggles(); // ✅ Safe to call now
+    // Load static components first
+    // Note: mainContentPath argument is no longer needed in loadAllComponents here,
+    // as the router will handle the main content.
+    // You might want to adjust loadAllComponents to not load #main-content,
+    // or keep it if you want the initial home page to load via loadComponents
+    // before the router takes over. For a true SPA, the router handles it.
+    loadAllComponents().then(function() { // Adjusted call
+      initializeReadMoreToggles(); // Initialize for initially loaded content
+      router.init(); // Initialize the router after common components are loaded
     }).catch(function(error) {
       console.error("Component loading error:", error);
     });
   });
 </script>
    <script>
-    AOS.init();
+    AOS.init(); // Initialize AOS globally
 
     document.addEventListener('DOMContentLoaded', function () {
+      // Initialize carousel only if it's part of the initial load or
+      // re-initialize if dynamically loaded content includes a carousel.
+      // The router's loadContent function would be a better place for this if
+      // the carousel is not always on the home page.
       var myCarousel = document.querySelector('#mainCarousel');
-      var carousel = new bootstrap.Carousel(myCarousel, {
-        interval: 5000,
-        pause: 'hover'
-      });
+      if (myCarousel) { // Check if carousel exists
+        var carousel = new bootstrap.Carousel(myCarousel, {
+          interval: 5000,
+          pause: 'hover'
+        });
+      }
     });
   </script>
 </body>

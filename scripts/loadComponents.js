@@ -1,3 +1,4 @@
+// scripts/loadComponents.js
 function loadComponent(selector, path) {
   return new Promise((resolve, reject) => {
     $(selector).load(path, function(response, status) {
@@ -10,12 +11,12 @@ function loadComponent(selector, path) {
   });
 }
 
-function loadAllComponents(mainContentPath) {
+function loadAllComponents() { // No mainContentPath argument
   return Promise.all([
     loadComponent("#header-container", "components/header.html"),
     loadComponent("#navbar-container", "components/navbar.html"),
     loadComponent("#sidebar", "components/sidebar.html"),
-    loadComponent("#main-content", mainContentPath),
+    // Removed: loadComponent("#main-content", mainContentPath),
     loadComponent("#footer", "components/footer.html")
   ]);
 }
