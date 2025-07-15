@@ -65,3 +65,11 @@
 .read-more-btn {
     cursor: pointer;
 }
+
+.team-card .card-img-top {
+       /* Add a border to the circular images */
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Subtle shadow for images */
+  }
+  .team-card .card-body {
+      padding-top: 0; /* Adjust padding for better alignment with image */
+  }

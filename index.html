@@ -22,32 +22,8 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <link rel="stylesheet" href="styles/enhanced_header.css">
   <link rel="stylesheet" href="styles/footer.css">
-  <script>
-window.MathJax = {
-  tex: {
-    inlineMath: [['$', '$'], ['\\(', '\\)']],
-    processEscapes: true,
-    tags: 'ams',
-    packages: {'[+]': ['ams']}
-  },
-  options: {
-    ignoreHtmlClass: 'tex-ignore',
-    processHtmlClass: 'tex-process'
-  },
-  startup: {
-    ready: () => {
-      MathJax.startup.defaultReady();
-      MathJax.startup.promise.then(() => {
-        document.dispatchEvent(new Event('MathJaxReady'));
-      });
-    }
-  }
-};
-</script>
-  
-  <!-- MathJax Scripts -->
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <script src="scripts/responsive-loader.js"></script> 
+
 </head>
 <body>
   <div class="container-wrapper">
@@ -72,38 +48,36 @@ window.MathJax = {
 <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
 <script src="scripts/loadComponents.js"></script>
 <script src="scripts/router.js"></script>
-<script src="scripts/dropdownHover.js"></script>
 <script src="scripts/read_more.js"></script>
 <script src="scripts/aos.js"></script>
-
-<!-- Initialization Script -->
 <script>
-
-  // Main initialization after components load
-  $(function() {
     loadAllComponents().then(function() {
-      // Initialize all components
-      initializeReadMoreToggles();
-      router.init();
-      enableDropdownHover();
-      
-      // Initial MathJax rendering if content has formulas
-      if (window.MathJax && MathJax.typesetPromise) {
-        MathJax.typesetPromise();
-      }
-      
-      // Set up AOS refresh for collapsible elements
-      document.querySelectorAll('.collapse').forEach(el => {
+    // Initialize components
+    initializeReadMoreToggles();
+    router.init();
+    
+    // Initialize dropdown hover only on large screens
+    if (typeof enableDropdownHover === 'function' && window.innerWidth >= 992) {
+        enableDropdownHover();
+    }
+    
+    // Initialize AOS
+    AOS.init();
+    document.querySelectorAll('.collapse').forEach(el => {
         el.addEventListener('shown.bs.collapse', () => AOS.refresh());
-      });
-      
-      // Dispatch initial content changed event
-      document.dispatchEvent(new Event('contentChanged'));
-    }).catch(function(error) {
-      console.error("Component loading error:", error);
     });
-  });
+    
+    // Initialize navbar toggler
+    if (typeof initNavbarToggler === 'function') {
+        initNavbarToggler();
+    }
+    
+    document.dispatchEvent(new Event('contentChanged'));
+}).catch(function(error) {
+    console.error("Initialization error:", error);
+});
 </script>
-  
+        <script src="scripts/navbar_toggler.js"></script>
+    
 </body>
 </html>

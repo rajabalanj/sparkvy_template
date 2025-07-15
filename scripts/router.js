@@ -2,7 +2,9 @@
 const router = {
     routes: {
         '/': 'components/main/index.html',
+        '/aboutus.html': 'components/main/aboutus.html',
         '/index.html': 'components/main/index.html',
+        '/products.html': 'components/main/products.html',
         '/Synthesis.html': 'components/main/synthesis.html',
         '/Characterization.html': 'components/main/characterization.html',
         '/electrochem_studies.html': 'components/main/electrochem_studies.html',
