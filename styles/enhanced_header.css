@@ -3,12 +3,7 @@ header.bg-white {
     padding: 1.5rem 0;
 }
 
-/* Logo Styling */
-.header-logo {
-    height: 80px;
-    width: auto;
-    margin-right: 30px;
-}
+
 
 /* Text Elements */
 .header-text h1 {

@@ -11,9 +11,7 @@ body {
   font-family: "Segoe UI", sans-serif;
   line-height: 1.6;
   background-color: #f9f9f9;
-  color: #333;
   overflow-x: hidden;
-  /* padding: 0 5%; */
 }
 
 .container-wrapper {
@@ -33,7 +31,7 @@ body {
 /* Header styles */
 header {
   background-color: white !important;
-  color: #004c91;
+  color: #203864;
   padding: 20px 0;
   width: 100%;
 }
@@ -64,13 +62,15 @@ header {
   font-family: "Jost", sans-serif;
   font-size: 2rem;
   font-weight: 700;
-  color: #004c91;
+  color: #203864;
 }
 
+/* Logo Styling */
 .header-logo {
-  height: 60px;
-  object-fit: contain;
-  margin-right: 20px;
+    height: 80px;
+    width: auto;
+    margin-right: 30px;
+    object-fit: contain;
 }
 
 @media (max-width: 991.98px) {
@@ -124,7 +124,7 @@ header {
 
 /* Navigation */
  .navbar {
-  background-color: #004c91 !important; /* Blue */
+  background-color: #203864 !important; /* Blue */
   padding: 0;
   width: 100%;
   border-radius: 5px;
@@ -137,8 +137,8 @@ header {
 
 
 .navbar-nav .nav-link:hover {
-  opacity: 1;
-  background-color: #5685a6 !important; /* Darker blue for hover */
+  opacity: 1; /* 32, 56, 100 */
+  background-color: #4d6083 !important; /* Darker blue for hover */
   color: #fff !important; /* White text on hover */
   border-radius: 5px;
 }
@@ -219,13 +219,13 @@ section {
 }
 
 .btn-primary-custom {
-  background-color: #004c91;
-  border-color: #004c91;
+  background-color: #203864;
+  border-color: #203864
 }
 
 /* Footer */
 footer {
-  background-color: #004c91 !important;
+  background-color: #203864 !important;
   color: white;
   padding: 0 5%;
   width: 100%;
@@ -270,7 +270,7 @@ footer {
   }
 
   .accordion-button i {
-      color: #004c91; /* Icon color */
+      color: #203864; /* Icon color */
       /* font-size: 1.2rem; Icon size */
   }
 
@@ -278,7 +278,7 @@ footer {
   .header-mobile-h1 {
       display: block !important; /* Override d-none for desktop */
       font-size: 1.5rem; /* Mobile font size */
-      color: #004c91;
+      color: #203864; /* Mobile text color */
       font-family: "Jost", sans-serif;
       font-weight: 700;
       margin: 0; /* Remove default margins */
@@ -312,7 +312,7 @@ footer {
   font-family: "Jost", sans-serif;
   font-size: 2rem;
   font-weight: 700;
-  color: #004c91;
+  color: #203864;
   /* letter-spacing: 1px; */
 }
 
@@ -357,7 +357,7 @@ footer {
 
 .service-subtitle {
   /* Typography */
-  color: #2c7be5;              /* Uncommented blue color */
+  color: #364c74;              /* Uncommented blue color */
   font-size: 1.5rem;           /* Added font size */
   font-weight: 600;            /* Added semi-bold weight */
   
@@ -609,7 +609,7 @@ li {
 }
 
 .text-primary {
-  color: #004c91 !important;
+  color: #203864 !important;
 }
 
 
@@ -704,6 +704,12 @@ li {
   text-align: center;
 }
 
+.contact-methods span {
+  color: #D9534F;
+  width: 20px;
+  text-align: center;
+}
+
 .btn-primary {
   background-color: #CC4A42;
   border-color: #CC4A42;
@@ -758,6 +764,7 @@ li {
 .equipment-info {
   padding: 1.5rem;
   border-top: 1px solid #f0f0f0;
+  color: #203864;
 }
 
 @media (max-width: 768px) {
@@ -893,7 +900,7 @@ li {
 }
 
 .navbar .dropdown-item:hover {
-  background-color: #005fa3;
+  background-color: #203864; /* Darker blue on hover */
   color: #fff;
 }
 
@@ -919,7 +926,7 @@ li {
   }
 
   .navbar .dropdown-item:hover {
-    background-color: #003f78;
+    background-color: #203864;
   }
 }
 
@@ -1006,7 +1013,7 @@ li {
 
 .section-title {
   /* Typography */
-  color: #004c91;              /* Using new darker color */
+  color: #203864;              /* Using new darker color */
   font-weight: 700;            /* Maintaining boldness */
   text-align: center;          /* Keeping centered alignment */
   font-size: 1.75rem;          /* Maintaining size control */
@@ -1033,14 +1040,14 @@ li {
 
 /* Custom style for card titles to differentiate from main section titles */
 .card-body h3.card-title {
-    color: #004c91; /* Match header color for consistency */
+    color: #203864; /* Match header color for consistency */
     font-weight: 600; /* Make it bold but not as heavy as section-title */
     margin-bottom: 1rem; /* Standard margin for a heading */
     /* Intentionally no border-bottom to differentiate from .section-title */
 }
 
 .subheading {
-  color: #004c91; /* Match header color for consistency */
+  color: #203864; /* Match header color for consistency */
   font-weight: 600; /* Make it bold but not as heavy as section-title */
   margin-bottom: 1rem; /* Standard margin for a heading */
   font-size: 1.25rem; /* Slightly smaller than section title */
@@ -1089,3 +1096,11 @@ mjx-container {
             height: 180px; /* Slightly smaller height on mobile */
         }
     }
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 1,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
