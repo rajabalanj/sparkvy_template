@@ -31,7 +31,7 @@ body {
 /* Header styles */
 header {
   background-color: white !important;
-  color: #203864;
+  color: #004b91cc;
   padding: 20px 0;
   width: 100%;
 }
@@ -62,7 +62,7 @@ header {
   font-family: "Jost", sans-serif;
   font-size: 2rem;
   font-weight: 700;
-  color: #203864;
+  color: #004c91;
 }
 
 /* Logo Styling */
@@ -124,7 +124,7 @@ header {
 
 /* Navigation */
  .navbar {
-  background-color: #203864 !important; /* Blue */
+  background-color: #004c91 !important; /* Blue */
   padding: 0;
   width: 100%;
   border-radius: 5px;
@@ -138,7 +138,7 @@ header {
 
 .navbar-nav .nav-link:hover {
   opacity: 1; /* 32, 56, 100 */
-  background-color: #4d6083 !important; /* Darker blue for hover */
+  background-color: #266096 !important; /* Darker blue for hover */
   color: #fff !important; /* White text on hover */
   border-radius: 5px;
 }
@@ -219,13 +219,13 @@ section {
 }
 
 .btn-primary-custom {
-  background-color: #203864;
-  border-color: #203864
+  background-color: #004c91;
+  border-color: #004c91
 }
 
 /* Footer */
 footer {
-  background-color: #203864 !important;
+  background-color: #004c91 !important;
   color: white;
   padding: 0 5%;
   width: 100%;
@@ -270,7 +270,7 @@ footer {
   }
 
   .accordion-button i {
-      color: #203864; /* Icon color */
+      color: #004c91; /* Icon color */
       /* font-size: 1.2rem; Icon size */
   }
 
@@ -278,7 +278,7 @@ footer {
   .header-mobile-h1 {
       display: block !important; /* Override d-none for desktop */
       font-size: 1.5rem; /* Mobile font size */
-      color: #203864; /* Mobile text color */
+      color: #004c91; /* Mobile text color */
       font-family: "Jost", sans-serif;
       font-weight: 700;
       margin: 0; /* Remove default margins */
@@ -312,7 +312,7 @@ footer {
   font-family: "Jost", sans-serif;
   font-size: 2rem;
   font-weight: 700;
-  color: #203864;
+  color: #004c91;
   /* letter-spacing: 1px; */
 }
 
@@ -609,7 +609,7 @@ li {
 }
 
 .text-primary {
-  color: #203864 !important;
+  color: #004c91 !important;
 }
 
 
@@ -764,7 +764,7 @@ li {
 .equipment-info {
   padding: 1.5rem;
   border-top: 1px solid #f0f0f0;
-  color: #203864;
+  color: #004c91;
 }
 
 @media (max-width: 768px) {
@@ -900,7 +900,7 @@ li {
 }
 
 .navbar .dropdown-item:hover {
-  background-color: #203864; /* Darker blue on hover */
+  background-color: #004c91; /* Darker blue on hover */
   color: #fff;
 }
 
@@ -926,7 +926,7 @@ li {
   }
 
   .navbar .dropdown-item:hover {
-    background-color: #203864;
+    background-color: #004c91;
   }
 }
 
@@ -1013,7 +1013,7 @@ li {
 
 .section-title {
   /* Typography */
-  color: #203864;              /* Using new darker color */
+  color: #004c91;              /* Using new darker color */
   font-weight: 700;            /* Maintaining boldness */
   text-align: center;          /* Keeping centered alignment */
   font-size: 1.75rem;          /* Maintaining size control */
@@ -1040,14 +1040,14 @@ li {
 
 /* Custom style for card titles to differentiate from main section titles */
 .card-body h3.card-title {
-    color: #203864; /* Match header color for consistency */
+    color: #004c91; /* Match header color for consistency */
     font-weight: 600; /* Make it bold but not as heavy as section-title */
     margin-bottom: 1rem; /* Standard margin for a heading */
     /* Intentionally no border-bottom to differentiate from .section-title */
 }
 
 .subheading {
-  color: #203864; /* Match header color for consistency */
+  color: #004c91; /* Match header color for consistency */
   font-weight: 600; /* Make it bold but not as heavy as section-title */
   margin-bottom: 1rem; /* Standard margin for a heading */
   font-size: 1.25rem; /* Slightly smaller than section title */
@@ -1061,13 +1061,7 @@ li {
 }
 
 /* Prevent Flash of Unstyled Content */
-.MathJax_Preview {
-  display: none !important;
-}
-mjx-container {
-  display: inline-block;
-  line-height: normal;
-}
+
 
 .product-card .card-img-top {
         height: 200px; /* Fixed height for product images */
@@ -1104,3 +1098,100 @@ mjx-container {
   'GRAD' 0,
   'opsz' 24
 }
+
+.service-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        columns: 2;
+        column-gap: 2.5rem;
+    }
+    
+    .service-list li {
+        padding: 14px 0;
+        position: relative;
+        transition: all 0.2s ease;
+    }
+    
+    .service-list li span {
+        position: relative;
+        padding-left: 24px;
+        display: inline-block;
+    }
+    
+    .service-list li span:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 12px;
+        height: 2px;
+        background: linear-gradient(90deg, #3a7bd5, #00d2ff);
+        transition: all 0.3s ease;
+    }
+    
+    .service-list li:hover span:before {
+        width: 16px;
+        background: linear-gradient(90deg, #00d2ff, #3a7bd5);
+    }
+    
+    .service-list li:hover {
+        transform: translateX(4px);
+    }
+    
+    .service-list-container {
+        background: #f8f9fa;
+        padding: 28px;
+        border-radius: 8px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.03);
+        border: 1px solid rgba(0,0,0,0.03);
+    }
+
+@media (max-width: 768px) {
+        .service-list {
+            columns: 1;
+        }
+    }
+
+.technical-content {
+        padding: 20px;
+    }
+    
+    .technical-heading {
+        color: #2c3e50;
+        font-size: 1.1rem;
+        margin-bottom: 15px;
+        font-weight: 600;
+    }
+    
+    .technical-text {
+        color: #7f8c8d;
+        margin-bottom: 20px;
+        line-height: 1.6;
+    }
+    
+    .technical-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+    
+    .technical-list li {
+        padding: 12px 0;
+        border-bottom: 1px solid rgba(0,0,0,0.05);
+    }
+    
+    .technical-term {
+        font-weight: 600;
+        color: #2c3e50;
+        display: block;
+        margin-bottom: 5px;
+    }
+    
+    .technical-definition {
+        color: #7f8c8d;
+        font-size: 0.95rem;
+        line-height: 1.5;
+        display: block;
+    }

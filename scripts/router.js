@@ -68,29 +68,6 @@ const router = {
                     if (typeof initializeReadMoreToggles === 'function') {
                         initializeReadMoreToggles();
                     }
-                    AOS.refresh();
-                    // MathJax rendering with proper timing
-                if (window.MathJax) {
-                    // Clear any pending typesetting
-                    MathJax.typesetClear && MathJax.typesetClear();
-                    
-                    // Three-step rendering process:
-                    setTimeout(() => {
-                        // 1. Let DOM settle
-                        MathJax.startup.document.state(0);
-                        
-                        // 2. Reprocess math
-                        MathJax.texReset();
-                        MathJax.typesetPromise().catch(err => {
-                            console.log('MathJax typeset error:', err);
-                            
-                            // 3. Fallback retry if needed
-                            setTimeout(() => {
-                                MathJax.typesetPromise();
-                            }, 500);
-                        });
-                    }, 100);
-                }
                 })
                 .catch(error => {
                     console.error('Error loading content:', error);
