@@ -1159,14 +1159,14 @@ li {
     }
     
     .technical-heading {
-        color: #2c3e50;
+        color: #364c74;
         font-size: 1.1rem;
         margin-bottom: 15px;
         font-weight: 600;
     }
     
     .technical-text {
-        color: #7f8c8d;
+        color: #2c3e50;
         margin-bottom: 20px;
         line-height: 1.6;
     }
@@ -1184,13 +1184,13 @@ li {
     
     .technical-term {
         font-weight: 600;
-        color: #2c3e50;
+        color: #364c74;
         display: block;
         margin-bottom: 5px;
     }
     
     .technical-definition {
-        color: #7f8c8d;
+        color: #2c3e50;
         font-size: 0.95rem;
         line-height: 1.5;
         display: block;
