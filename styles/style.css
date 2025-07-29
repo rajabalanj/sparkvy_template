@@ -1195,3 +1195,55 @@ li {
         line-height: 1.5;
         display: block;
     }
+
+ /* Styling for the new headings within the service sections */
+  .section-heading {
+    margin-top: 25px; /* More space above new sub-sections */
+    margin-bottom: 15px; /* Space below heading before table */
+    color: #364c74;
+    font-size: 1.4em;
+    border-bottom: 2px solid #eee; /* A subtle separator */
+    padding-bottom: 5px;
+  }
+
+  /* General table styling */
+  .data-table {
+    width: 100%; /* Make tables take full width available */
+    border-collapse: collapse; /* Remove double borders */
+    margin-bottom: 30px; /* Space after each table */
+    font-size: 0.95em; /* Slightly smaller font for table content */
+    line-height: 1.5; /* Improve readability of text in cells */
+  }
+
+  /* Table header styling */
+  .data-table th {
+    background-color: #004c91; /* Light grey background for headers */
+    padding: 12px 10px; /* More padding in headers */
+    border: 1px solid #ddd;
+    text-align: left;
+    color: white; /* Darker text for headers */
+    font-weight: bold;
+  }
+
+  /* Table cell styling */
+  .data-table td {
+    padding: 10px 10px; /* Good padding for data cells */
+    border: 1px solid #eee; /* Lighter border for cells */
+    vertical-align: top; /* Align content to the top for multi-line cells */
+    color: #004c91
+  }
+
+  /* Zebra striping for table rows for better readability */
+  .data-table tbody tr:nth-child(even) {
+    background-color: #f6f6f6; /* Lighter background for even rows */
+  }
+
+  /* Hover effect for table rows */
+  .data-table tbody tr:hover {
+    background-color: #e0f7fa; /* Light blue on hover */
+  } 
+
+.bg-primary {
+  background-color: #004c91 !important; /* Blue */
+  color: #fff !important; /* White text */
+}
