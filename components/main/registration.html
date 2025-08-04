@@ -1,0 +1,183 @@
+<div class="col-md-12">
+    <section id="registration" class="feedback-section">
+        <div class="container">
+            <h2 class="section-title">Registration Form</h2>
+            
+            <div class="feedback-form-container">
+                <form id="sariRegistrationForm" name="sariRegistrationForm" method="POST" data-netlify="true" enctype="multipart/form-data" class="needs-validation">
+                    <input type="hidden" name="form-name" value="sariRegistrationForm">
+                    <div class="alert alert-info mb-4" role="alert">
+                        <h4 class="alert-heading">Instructions</h4>
+                        <ul class="list-unstyled mb-2">
+                            <li class="mb-2"><i class="fas fa-info-circle me-2 text-primary"></i>Sample should be in dry condition.</li>
+                            <li class="mb-2"><i class="fas fa-info-circle me-2 text-primary"></i>After filling this registration form, send your samples along with the analysis-wise job requisition form available in the Downloads section.</li>
+                            <li class="mb-2"><i class="fas fa-info-circle me-2 text-primary"></i>Mention your sample safety information in the form.</li>
+                            <li class="mb-2"><i class="fas fa-info-circle me-2 text-primary"></i>Payment can be done through UPI / Netbanking.</li>
+                            <li class="mb-2"><i class="fas fa-info-circle me-2 text-primary"></i>For any doubts regarding payment or charges, kindly contact us</li>
+                            <li class="mb-2"><span class="material-symbols-outlined">
+                                    call
+                                  </span>: <a href="tel:7708214927" class="text-decoration-none">7708214927</a></li>
+                            <li class="mb-2"><span class="material-symbols-outlined mt-1">
+                                    email
+                                  </span>: <a href="mailto:info@sparkvyresearchhub.com" class="text-decoration-none">info@sparkvyresearchhub.com</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label for="applicantName" class="form-label">Name of the Applicant *</label>
+                            <input type="text" name="applicantName" class="form-control" id="applicantName" required>
+                            <div class="invalid-feedback">
+                                Please provide the applicant's name.
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 mb-3">
+                            <label for="applicantCategory" class="form-label">Category of the Applicant *</label>
+                            <select name="applicantCategory" class="form-select" id="applicantCategory" required>
+                                <option value="" disabled selected>Select category</option>
+                                <option value="Academy">Academy</option>
+                                <option value="Industry">Industry</option>
+                            </select>
+                            <div class="invalid-feedback">
+                                Please select a category.
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 mb-3">
+                            <label for="designation" class="form-label">Designation *</label>
+                            <input type="text" name="designation" class="form-control" id="designation" required>
+                            <div class="invalid-feedback">
+                                Please provide your designation.
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-6 mb-3">
+                            <label for="department" class="form-label">Department/School</label>
+                            <input type="text" name="department" class="form-control" id="department">
+                            <div class="invalid-feedback">
+                                Please provide your Department/School.
+                            </div>
+                        </div>
+
+                        <div class="col-12 mb-3">
+                            <label for="institute" class="form-label">Institute/Industry </label>
+                            <input type="text" name="institute" class="form-control" id="institute">
+                            <div class="invalid-feedback">
+                                Please provide your Institute/Industry.
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-6 mb-3">
+                            <label for="email" class="form-label">Email – ID (Results to be shared) *</label>
+                            <input type="email" name="email" class="form-control" id="email" required>
+                            <div class="invalid-feedback">
+                                Please provide a valid email address.
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 mb-3">
+                            <label for="contactNo" class="form-label">Contact No. *</label>
+                            <input type="tel" name="contactNo" class="form-control" id="contactNo" required pattern="[0-9]{10,15}" title="Please enter a valid phone number.">
+                            <div class="invalid-feedback">
+                                Please provide a valid contact number.
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 mb-3">
+                            <label for="whatsappNo" class="form-label">Watsapp No. *</label>
+                            <input type="tel" name="whatsappNo" class="form-control" id="whatsappNo" required pattern="[0-9]{10,15}" title="Please enter a valid phone number.">
+                            <div class="invalid-feedback">
+                                Please provide a valid Whatsapp number.
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 mb-3">
+                            <label for="billingAddress" class="form-label">Billing Address *</label>
+                            <textarea class="form-control" name="billingAddress" id="billingAddress" rows="2" required></textarea>
+                            <div class="invalid-feedback">
+                                Please provide your billing address.
+                            </div>
+                        </div>
+
+                        <div class="col-12 mb-3">
+                            <label for="characterizationRequired" class="form-label">Characterization Required *</label>
+                            <textarea class="form-control" name="characterizationRequired" id="characterizationRequired" rows="3" required></textarea>
+                            <div class="invalid-feedback">
+                                Please mention the characterization required.
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-6 mb-3">
+                            <label for="numberOfSamples" class="form-label">No. of Samples (if Applicable) *</label>
+                            <input type="number" name="numberOfSamples" class="form-control" id="numberOfSamples" min="0">
+                            <div class="invalid-feedback">
+                                Please enter the number of samples.
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 mb-3">
+                            <label for="elementsPresented" class="form-label">Elements Presented in the sample (e.g., Mg, Ti, S) *</label>
+                            <input type="text" name="elementsPresented" class="form-control" id="elementsPresented" required>
+                            <div class="invalid-feedback">
+                                Please provide the elements presented in the sample.
+                            </div>
+                        </div>
+
+                        <div class="col-12 mb-3">
+                            <label for="sampleNature" class="form-label">Nature of the sample *</label>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="sampleNature" id="powder" value="Powder" required>
+                                <label class="form-check-label" for="powder">Powder</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="sampleNature" id="film" value="Film" required>
+                                <label class="form-check-label" for="film">Film</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="sampleNature" id="liquid" value="Liquid" required>
+                                <label class="form-check-label" for="liquid">Liquid</label>
+                            </div>
+                            <div class="invalid-feedback">
+                                Please select the nature of the sample.
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 mb-3">
+                            <label for="amount" class="form-label">Amount Rs. *</label>
+                            <input type="number" name="amount" class="form-control" id="amount" required min="0">
+                            <div class="invalid-feedback">
+                                Please enter the payment amount.
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 mb-3">
+                            <label for="transactionNo" class="form-label">Transaction No. *</label>
+                            <input type="text" name="transactionNo" class="form-control" id="transactionNo" required>
+                            <div class="invalid-feedback">
+                                Please enter the transaction number.
+                            </div>
+                        </div>
+
+                        <div class="col-12 mb-3">
+                            <label for="transactionSlip" class="form-label">Upload Transaction Slip *</label>
+                            <input type="file" name="transactionSlip" class="form-control" id="transactionSlip" required>
+                            <div class="invalid-feedback">
+                                Please upload the transaction slip.
+                            </div>
+                        </div>
+                        
+                        <div class="col-12 mb-4">
+                            <label for="remarks" class="form-label">Remarks</label>
+                            <textarea class="form-control" name="remarks" id="remarks" rows="3"></textarea>
+                        </div>
+                        
+                        <div class="col-12 text-center">
+                            <button class="btn btn-primary btn-lg" type="submit">SUBMIT</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+</div>

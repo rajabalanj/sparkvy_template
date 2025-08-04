@@ -21,6 +21,9 @@ const router = {
         '/career.html': 'components/main/career.html',
         '/contact.html': 'components/main/contact.html',
         '/workwithus.html': 'components/main/workwithus.html',
+        '/photocatalytic_analysis_form.html': 'components/main/photocatalytic_analysis_form.html',
+        '/super_capacitors_battery_studies.html': 'components/main/super_capacitors_battery_studies.html',
+        '/registration.html': 'components/main/registration.html',
     },
 
     init: function() {
